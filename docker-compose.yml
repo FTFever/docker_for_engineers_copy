@@ -28,6 +28,9 @@ services:
       UPSTREAM_DATABASE: upstreamdb
     env_file:
       - .env.spark
+   #newly added
+    extra_hosts: 
+      - host.docker.internal:host-gateway
   
   spark-history-server:
     container_name: spark-history
