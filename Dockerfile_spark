@@ -14,8 +14,8 @@ COPY ./count.sql ./
 COPY ./tpch-dbgen ./tpch-dbgen/
 
 RUN apt-get update && \
-    # apt-get install -y --no-install-recommends \ (original version)
-    apt-get install -y python3-matplotlib \
+    apt-get install -y --no-install-recommends \
+    # apt-get install -y python3-matplotlib \
     rsync && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
